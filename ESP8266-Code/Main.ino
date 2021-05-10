@@ -4,8 +4,8 @@
 
 
 
-const char * ssid = "Marc";
-const char * password = "8c6c54bee1661a6e";
+const char * ssid = "WiFi";
+const char * password = "password";
 
 
 
@@ -53,7 +53,7 @@ void loop(){
 
     HTTPClient http;
 
-    http.begin("http://192.168.1.104:8090/esp_mount");
+    http.begin("http://192.168.1.XXX:8090/esp_mount");
    
     int httpCode = http.GET();
     
@@ -66,7 +66,7 @@ void loop(){
        Serial.println(payload);
     }
 
-    http.begin("http://192.168.1.104:8090/home");
+    http.begin("http://192.168.1.XXX:8090/home");
     int httpCode1 =  http.POST(json);
    
 
